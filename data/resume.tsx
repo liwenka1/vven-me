@@ -10,17 +10,34 @@ export const DATA = {
   summary: "这里是一些详细介绍",
   avatarUrl: "/me.png",
   skills: [
+    // 前端核心
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "TypeScript",
+    "Tailwind CSS",
+    "Vue",
     "React",
     "Next.js",
-    "Typescript",
+    "Nuxt.js",
+
+    // 前端工程化
+    "Vite",
+    "Webpack",
+
+    // 后端相关
     "Node.js",
-    "Python",
-    "Go",
-    "Postgres",
+    "NestJS",
+    "Prisma",
+    "Nginx",
+
+    // 部署与运维
     "Docker",
-    "Kubernetes",
-    "Java",
-    "C++"
+    "Vercel",
+
+    // 版本控制
+    "Git",
+    "GitHub"
   ],
   navbar: [{ href: "/", icon: Home, label: "Home" }],
   contact: {

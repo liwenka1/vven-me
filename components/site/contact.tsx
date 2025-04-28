@@ -14,11 +14,11 @@ const Contact = () => {
             <div className="bg-foreground text-background inline-block rounded-lg px-3 py-1 text-sm">Contact</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
             <p className="text-muted-foreground mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Want to chat? Just shoot me a dm{" "}
+              你可以通过{" "}
               <Link href={DATA.contact.social.X.url} className="text-blue-500 hover:underline">
-                with a direct question on twitter
+                twitter
               </Link>{" "}
-              and I&apos;ll respond whenever I can. I will ignore all soliciting.
+              联系我
             </p>
           </div>
         </BlurFade>
