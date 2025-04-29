@@ -18,6 +18,10 @@ const Contact = () => {
               <Link href={DATA.contact.social.X.url} className="text-blue-500 hover:underline">
                 twitter
               </Link>{" "}
+              或者 发送{" "}
+              <Link href={DATA.contact.social.email.url} className="text-blue-500 hover:underline">
+                email
+              </Link>{" "}
               联系我
             </p>
           </div>

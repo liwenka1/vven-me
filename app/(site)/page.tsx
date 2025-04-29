@@ -2,6 +2,7 @@ import About from "@/components/site/about";
 import Contact from "@/components/site/contact";
 import Education from "@/components/site/education";
 import Hero from "@/components/site/hero";
+import Projects from "@/components/site/projects";
 import Skills from "@/components/site/skills";
 
 const Site = () => {
@@ -11,6 +12,7 @@ const Site = () => {
       <About />
       <Education />
       <Skills />
+      <Projects />
       <Contact />
     </main>
   );

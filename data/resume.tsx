@@ -1,4 +1,4 @@
-import { Github, Twitter, Mail, Home } from "lucide-react";
+import { Github, Twitter, Mail, Home, Globe } from "lucide-react";
 
 export const DATA = {
   name: "VVenKai",
@@ -7,7 +7,7 @@ export const DATA = {
   location: "北京",
   locationLink: "https://www.google.com/maps/place/beijing",
   description: "软件工程师，开源爱好者",
-  summary: "这里是一些详细介绍",
+  summary: "A Internet Person， 重度焦虑，忧郁，人格分裂。Better Late than Never",
   avatarUrl: "/me.png",
   skills: [
     // 前端核心
@@ -60,7 +60,7 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:2020583117@qq.com",
         icon: Mail,
 
         navbar: false
@@ -77,5 +77,22 @@ export const DATA = {
       end: "2021"
     }
   ],
-  projects: []
+  projects: [
+    {
+      title: "Chat Collect",
+      href: "https://nav.liwenkai.fun",
+      dates: "2024",
+      active: true,
+      description: "一个简单的导航网站",
+      technologies: ["Next.js", "Typescript", "TailwindCSS", "Stripe", "Shadcn UI"],
+      links: [
+        {
+          type: "Website",
+          href: "https://nav.liwenkai.fun",
+          icon: <Globe className="size-3" />
+        }
+      ],
+      image: "/next-web-nav.png"
+    }
+  ]
 } as const;
