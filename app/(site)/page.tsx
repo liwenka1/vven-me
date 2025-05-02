@@ -2,6 +2,7 @@ import About from "@/components/site/about";
 import Contact from "@/components/site/contact";
 import Education from "@/components/site/education";
 import Hero from "@/components/site/hero";
+import Music from "@/components/site/music";
 import Projects from "@/components/site/projects";
 import Skills from "@/components/site/skills";
 
@@ -13,6 +14,7 @@ const Site = () => {
       <Education />
       <Skills />
       <Projects />
+      <Music />
       <Contact />
     </main>
   );
