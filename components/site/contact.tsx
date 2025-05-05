@@ -14,15 +14,15 @@ const Contact = () => {
             <div className="bg-foreground text-background inline-block rounded-lg px-3 py-1 text-sm">Contact</div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get in Touch</h2>
             <p className="text-muted-foreground mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              你可以通过{" "}
+              欢迎通过{" "}
               <Link href={DATA.contact.social.X.url} className="text-blue-500 hover:underline">
                 twitter
               </Link>{" "}
-              或者 发送{" "}
+              或发送{" "}
               <Link href={DATA.contact.social.email.url} className="text-blue-500 hover:underline">
                 email
               </Link>{" "}
-              联系我
+              与我联系，我将尽快回复。
             </p>
           </div>
         </BlurFade>
