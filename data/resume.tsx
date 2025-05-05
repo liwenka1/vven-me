@@ -95,7 +95,8 @@ export const DATA = {
       href: "https://nav.liwenkai.fun",
       dates: "2024",
       active: true,
-      description: "一个简单的导航网站",
+      description:
+        "简单好用的导航网站，打造个性化导航，Next.js 与 TailwindCSS 的完美结合，通过JSON自定义导航数据，支持日夜颜色模式切换",
       technologies: ["Next.js", "Typescript", "TailwindCSS", "Stripe", "Shadcn UI"],
       links: [
         {
