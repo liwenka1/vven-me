@@ -49,78 +49,96 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.21 0.006 285.885);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.21 0.006 285.885);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.705 0.015 286.067);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-primary: oklch(0.21 0.006 285.885);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.705 0.015 286.067);
+  /* 参考Apple设计和4oimage的现代清新风格 */
+  --radius: 1rem;
+  --background: oklch(0.995 0.003 240);
+  --foreground: oklch(0.2 0.01 240);
+  --card: oklch(1 0.003 240);
+  --card-foreground: oklch(0.2 0.01 240);
+  --popover: oklch(1 0.003 240);
+  --popover-foreground: oklch(0.2 0.01 240);
+  --primary: oklch(0.55 0.2 280);
+  --primary-foreground: oklch(1 0.005 240);
+  --secondary: oklch(0.7 0.15 200);
+  --secondary-foreground: oklch(0.1 0.01 240);
+  --accent: oklch(0.8 0.12 320);
+  --accent-foreground: oklch(0.1 0.01 240);
+  --muted: oklch(0.96 0.02 240);
+  --muted-foreground: oklch(0.5 0.05 240);
+  --border: oklch(0.9 0.03 240);
+  --input: oklch(0.92 0.01 240);
+  --ring: oklch(0.55 0.2 280 / 0.3);
+  --destructive: oklch(0.7 0.2 30);
+  
+  /* 统一图表配色，灵感来自苹果图表色彩 */
+  --chart-1: oklch(0.55 0.2 280);  /* 主品牌紫色 */
+  --chart-2: oklch(0.7 0.15 200);  /* 清新蓝 */
+  --chart-3: oklch(0.8 0.12 320);  /* 粉红色调 */
+  --chart-4: oklch(0.6 0.15 160);  /* 绿色 */
+  --chart-5: oklch(0.65 0.18 60);  /* 橙色 */
+  
+  /* 侧边栏样式保持一致性 */
+  --sidebar: oklch(1 0.003 240);
+  --sidebar-foreground: oklch(0.2 0.01 240);
+  --sidebar-primary: oklch(0.55 0.2 280);
+  --sidebar-primary-foreground: oklch(1 0.003 240);
+  --sidebar-accent: oklch(0.8 0.12 320);
+  --sidebar-accent-foreground: oklch(0.2 0.01 240);
+  --sidebar-border: oklch(0.9 0.03 240);
+  --sidebar-ring: oklch(0.55 0.2 280 / 0.3);
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.92 0.004 286.32);
-  --primary-foreground: oklch(0.21 0.006 285.885);
-  --secondary: oklch(0.274 0.006 286.033);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.552 0.016 285.938);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.552 0.016 285.938);
+  /* 暗色主题 - 参考Apple深色模式与4oimage */
+  --background: oklch(0.12 0.01 240);
+  --foreground: oklch(0.95 0.01 240);
+  --card: oklch(0.15 0.01 240);
+  --card-foreground: oklch(0.95 0.01 240);
+  --popover: oklch(0.15 0.01 240);
+  --popover-foreground: oklch(0.95 0.01 240);
+  --primary: oklch(0.7 0.15 280);
+  --primary-foreground: oklch(0.1 0.01 240);
+  --secondary: oklch(0.55 0.15 200);
+  --secondary-foreground: oklch(0.95 0.01 240);
+  --accent: oklch(0.65 0.12 320);
+  --accent-foreground: oklch(0.95 0.01 240);
+  --muted: oklch(0.2 0.02 240);
+  --muted-foreground: oklch(0.7 0.05 240);
+  --border: oklch(0.3 0.03 240);
+  --input: oklch(0.25 0.02 240);
+  --ring: oklch(0.7 0.15 280 / 0.3);
+  --destructive: oklch(0.65 0.18 30);
+  
+  /* 暗色图表配色 */
+  --chart-1: oklch(0.7 0.15 280);  /* 主品牌紫色 */
+  --chart-2: oklch(0.55 0.15 200);  /* 清新蓝 */
+  --chart-3: oklch(0.65 0.12 320);  /* 粉红色调 */
+  --chart-4: oklch(0.5 0.15 160);  /* 绿色 */
+  --chart-5: oklch(0.55 0.18 60);  /* 橙色 */
+  
+  /* 侧边栏样式 */
+  --sidebar: oklch(0.15 0.01 240);
+  --sidebar-foreground: oklch(0.95 0.01 240);
+  --sidebar-primary: oklch(0.7 0.15 280);
+  --sidebar-primary-foreground: oklch(0.1 0.01 240);
+  --sidebar-accent: oklch(0.65 0.12 320);
+  --sidebar-accent-foreground: oklch(0.95 0.01 240);
+  --sidebar-border: oklch(0.3 0.03 240);
+  --sidebar-ring: oklch(0.7 0.15 280 / 0.3);
 }
 
 @layer base {
   html {
     scrollbar-gutter: stable;
+    font-size: 16px;
+    /* Apple风格的优化排版 */
+    line-height: 1.5;
+    font-feature-settings: "kern", "liga", "calt";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+  
   /* html tag is required here to provide higher specificity */
   html {
     @supports (scrollbar-gutter: stable) {
@@ -133,15 +151,19 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
   html {
     @apply scroll-smooth;
   }
+  
   body {
     @apply bg-background text-foreground overscroll-none;
+    transition: background-color 0.5s ease, color 0.5s ease;
   }
 
+  /* Improve scrollbar aesthetics for better cognitive experience */
   ::-webkit-scrollbar {
-    width: 5px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
@@ -150,7 +172,7 @@
 
   ::-webkit-scrollbar-thumb {
     background: var(--border);
-    border-radius: 5px;
+    border-radius: 8px;
   }
 
   * {
@@ -161,5 +183,245 @@
   [role="button"],
   button {
     @apply cursor-pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  /* Enhance focus states for accessibility */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+  
+  /* Improve text selection - Apple风格 */
+  ::selection {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+  
+  /* Improve link transitions */
+  a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Add subtle hover effects to interactive elements */
+  button:hover, [role="button"]:hover {
+    transform: translateY(-1px);
+  }
+  
+  button:active, [role="button"]:active {
+    transform: translateY(0);
+  }
+}
+
+/* 优化排版和布局 */
+@layer components {
+  /* 类似于4oimage和Apple的容器样式 */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+    max-width: min(100%, theme('screens.xl'));
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* 紧凑的内容区域 */
+  section:not(#hero) {
+    @apply py-12 md:py-16;
+    scroll-margin-top: 2rem;
+  }
+  
+  /* 优化标题与内容的距离 */
+  section h2 {
+    @apply mb-6 font-bold;
+  }
+  
+  /* 优化标题排版，基于Apple设计风格 */
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-medium;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl mb-6 font-bold;
+  }
+  
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl mb-4;
+  }
+  
+  h3 {
+    @apply text-xl sm:text-2xl mb-3;
+  }
+  
+  /* 段落样式 */
+  p {
+    @apply mb-4 text-pretty leading-relaxed;
+    max-width: 75ch;
+  }
+  
+  /* 现代卡片样式，参考4oimage */
+  .card {
+    @apply bg-card rounded-xl border p-5 shadow-sm;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    @apply shadow-md;
+    transform: translateY(-2px);
+  }
+
+  /* Apple启发的按钮样式 */
+  .btn {
+    @apply inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-all;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground shadow-md hover:shadow-lg hover:bg-primary/90;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground shadow-sm hover:shadow-md hover:bg-secondary/90;
+  }
+
+  .btn-outline {
+    @apply border border-border bg-background/80 text-foreground backdrop-blur-sm hover:bg-accent/10;
+  }
+  
+  /* 优化图像显示 */
+  img, svg {
+    @apply max-w-full h-auto;
+    transition: filter 0.3s ease;
+  }
+  
+  /* 类似4oimage的内容网格 */
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* 导航项目 */
+  .nav-item {
+    @apply px-3 py-2 rounded-full text-sm font-medium;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .nav-item:hover {
+    @apply bg-secondary/20;
+  }
+  
+  /* 响应式调整 */
+  @media (max-width: 640px) {
+    section:not(#hero) {
+      @apply py-8;
+    }
+    
+    h1 {
+      @apply text-3xl mb-4;
+    }
+    
+    h2 {
+      @apply text-2xl mb-3;
+    }
+  }
+  
+  /* 精致的淡入动画 */
+  .fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* 高质量图像容器 */
+  .img-container {
+    @apply relative overflow-hidden rounded-xl;
+    aspect-ratio: 16/9;
+  }
+  
+  .img-container img {
+    @apply object-cover w-full h-full;
+    transition: transform 0.5s ease;
+  }
+  
+  .img-container:hover img {
+    transform: scale(1.03);
+  }
+  
+  /* 优化暗模式下的可读性和美学 */
+  .dark .prose {
+    @apply prose-invert prose-headings:text-foreground prose-p:text-foreground/90;
+  }
+  
+  /* 优化图像滤镜 */
+  .dark img:not([src*='.svg']) {
+    filter: brightness(0.9);
+  }
+  
+  /* 背景网格样式 - 更微妙的4oimage风格 */
+  .bg-grid-pattern {
+    background-size: 120px 120px;
+    background-image: 
+      radial-gradient(circle, var(--primary)/5% 1px, transparent 1px);
+    background-position: center center;
+  }
+  
+  .dark .bg-grid-pattern {
+    background-image: 
+      radial-gradient(circle, var(--primary)/10% 1px, transparent 1px);
+  }
+  
+  /* 平滑过渡 */
+  .page-transition {
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .page-transition-enter {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  .page-transition-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* 磨砂玻璃效果 - Apple设计风格 */
+  .glass-effect {
+    background: var(--background)/90;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+  }
+  
+  /* 项目卡片 - 4oimage风格 */
+  .project-card {
+    @apply relative flex flex-col overflow-hidden rounded-xl bg-card border border-border;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.07);
+  }
+  
+  .project-card__image {
+    @apply aspect-[16/9] w-full overflow-hidden;
+  }
+  
+  .project-card__image img {
+    @apply h-full w-full object-cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .project-card:hover .project-card__image img {
+    transform: scale(1.05);
+  }
+  
+  .project-card__content {
+    @apply flex flex-1 flex-col p-5;
   }
 }
