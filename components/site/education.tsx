@@ -9,19 +9,22 @@ const Education = () => {
   return (
     <div className="relative">
       {/* 背景装饰 */}
-      <div className="absolute -left-20 top-10 h-[200px] w-[200px] rounded-full bg-accent/5 blur-[80px]" aria-hidden="true" />
-      
+      <div
+        className="bg-accent/5 absolute top-10 -left-20 h-[200px] w-[200px] rounded-full blur-[80px]"
+        aria-hidden="true"
+      />
+
       <div className="relative">
         {/* 标题部分 */}
         <BlurFade delay={BLUR_FADE_DELAY * 2}>
           <div className="mb-6 flex items-center">
-            <div className="mr-3 flex size-10 items-center justify-center rounded-full bg-accent/10">
-              <GraduationCap className="size-5 text-accent" aria-hidden="true" />
+            <div className="bg-accent/10 mr-3 flex size-10 items-center justify-center rounded-full">
+              <GraduationCap className="text-accent size-5" aria-hidden="true" />
             </div>
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl my-0 flex items-center">教育经历</h2>
+            <h2 className="my-0 flex items-center text-2xl font-bold tracking-tight sm:text-3xl">教育经历</h2>
           </div>
         </BlurFade>
-        
+
         {/* 内容部分 */}
         <div className="space-y-4">
           {DATA.education.map((education, id) => (

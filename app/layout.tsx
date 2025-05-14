@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#1a1a1a" }
   ],
   robots: "index, follow",
-  manifest: "/manifest.json",
+  manifest: "/manifest.json"
 };
 
 export default function RootLayout({
@@ -39,7 +39,7 @@ export default function RootLayout({
         <meta name="emotion-insertion-point" content="" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} mx-auto min-h-screen w-full scroll-smooth antialiased selection:bg-primary selection:text-primary-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} selection:bg-primary selection:text-primary-foreground mx-auto min-h-screen w-full scroll-smooth antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="relative flex min-h-screen flex-col">
