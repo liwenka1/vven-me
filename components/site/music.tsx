@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 import "aplayer/dist/APlayer.min.css";
 import APlayer from "aplayer";
-
 import { BlurFade } from "../magicui/blur-fade";
+import { Music as MusicIcon } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -43,18 +43,29 @@ const Music = () => {
   }, []); // Empty dependency array ensures this runs only once after mount
 
   return (
-    <section id="music">
-      <div className="w-full gap-4 py-12">
-        <BlurFade delay={BLUR_FADE_DELAY * 16}>
-          <div className="space-y-3">
-            <div className="flex justify-center">
-              <div className="bg-foreground text-background inline-block rounded-lg px-3 py-1 text-sm">Music</div>
+    <div className="relative">
+      {/* 背景装饰 */}
+      <div className="absolute -left-20 top-10 h-[200px] w-[200px] rounded-full bg-accent/5 blur-[80px]" aria-hidden="true" />
+      
+      <div className="relative">
+        {/* 标题部分 */}
+        <BlurFade delay={BLUR_FADE_DELAY * 2}>
+          <div className="mb-6 flex items-center">
+            <div className="mr-3 flex size-10 items-center justify-center rounded-full bg-secondary/10">
+              <MusicIcon className="size-5 text-secondary" aria-hidden="true" />
             </div>
-            <div id="aplayer" ref={playerRef} className="w-full" />
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl my-0 flex items-center">音乐收藏</h2>
+          </div>
+        </BlurFade>
+        
+        {/* 内容部分 */}
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+          <div className="rounded-xl bg-card/50 p-6 shadow-sm">
+            <div id="aplayer" ref={playerRef} className="aplayer-wrap" />
           </div>
         </BlurFade>
       </div>
-    </section>
+    </div>
   );
 };
 
