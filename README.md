@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VVEN-ME | 个人作品集
 
-## Getting Started
+一个采用现代设计美学的个人作品集网站，基于Next.js、TailwindCSS构建，结合认知科学与色彩心理学原理进行全面优化设计。
 
-First, run the development server:
+## 设计理念
+
+本项目融合了苹果设计语言和4oimage设计风格的精髓，注重以下核心设计原则：
+
+- 🧠 **认知科学原则**：基于用户认知与注意力机制优化视觉层次和信息架构
+- 🎨 **色彩心理学**：精心选择色彩组合，传达专业、信任与创新的情感体验
+- 🔍 **极简主义**：去除视觉干扰，专注于内容本身，提供清晰直观的用户体验
+- ✨ **微互动**：精心设计的过渡动画和反馈效果，提升用户参与感和满意度
+- 📱 **全响应式**：在所有设备上提供一致且优化的体验
+
+## 特点
+
+- 🖼️ **全屏Hero区域**：视觉冲击力强的首屏设计，立即吸引用户注意
+- 🌓 **优雅的明暗模式**：细致调整的明暗主题，考虑不同光线环境下的最佳阅读体验
+- 🎭 **微妙的背景效果**：灵感来自苹果设计的模糊渐变背景，创造深度感
+- 📊 **内容优先排版**：优化的阅读节奏和视觉层次，让内容更易消化
+- 🧩 **模块化组件**：每个部分独立优化，同时保持整体设计语言一致性
+- 🎵 **沉浸式音乐体验**：集成APlayer提供的音乐播放功能
+- 🎭 **精美动画效果**：优雅的淡入和过渡效果增强用户体验
+
+## 主要技术
+
+- **框架**: [Next.js 15](https://nextjs.org/)
+- **样式**: [TailwindCSS 4](https://tailwindcss.com/)
+- **UI组件**: 自定义组件和[Radix UI](https://www.radix-ui.com/)
+- **图标**: [Lucide React](https://lucide.dev/)
+- **动画**: Motion库和TW-Animate
+- **音乐播放器**: APlayer集成
+- **主题系统**: next-themes驱动的主题切换
+- **排版**: Geist字体家族
+- **Markdown**: 使用React Markdown渲染内容
+
+## 色彩心理学应用
+
+本项目的配色方案经过精心设计：
+
+- **主要紫色调**：创造独特品牌识别，同时传达创新与独特性
+- **配合蓝色**：增强可信度和专业感
+- **点缀粉色**：增添亲和力和活力
+- **精心校准的对比度**：确保最佳可读性同时减少视觉疲劳
+- **深思熟虑的暗色模式**：不仅仅是颜色反转，而是重新调整以保持设计意图
+- **背景微妙渐变**：创造深度感而不分散注意力
+
+## 视觉效果
+
+- **磨砂玻璃效果**：受苹果设计语言启发的半透明效果
+- **圆形设计元素**：符合当代设计趋势的圆角和圆形UI元素
+- **微妙网格背景**：提供视觉锚点，改善空间感知
+- **浮动卡片设计**：通过轻微阴影和悬停效果增强深度感
+- **图标与文本协调**：精心搭配的视觉语言，保持一致性
+
+## 开始使用
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# 安装依赖
+pnpm install
+
+# 启动开发服务器
 pnpm dev
-# or
-bun dev
+
+# 构建生产版本
+pnpm build
+
+# 启动生产服务器
+pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+用浏览器打开 [http://localhost:3000](http://localhost:3000) 查看结果。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 参考与灵感
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Apple设计语言](https://developer.apple.com/design/)
+- [4oimage](https://4oimage.site/landing)的现代清新美学
+- 基于认知科学的设计原则
+- 色彩心理学研究
 
-## Learn More
+## 许可证
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+本项目采用 [MIT 许可证](LICENSE) 授权。
