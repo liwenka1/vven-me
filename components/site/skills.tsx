@@ -27,7 +27,7 @@ const Skills = () => {
 
         {/* 内容部分 */}
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <div className="bg-card/50 rounded-xl p-6 shadow-sm">
+          <div className="bg-card/50 rounded-xl border p-6 shadow-sm">
             <div className="flex flex-wrap gap-2">
               {DATA.skills.map((skill, id) => (
                 <BlurFade key={skill} delay={BLUR_FADE_DELAY * 4 + id * 0.03}>

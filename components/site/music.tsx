@@ -11,18 +11,21 @@ const APLAYER_CUSTOM_STYLES = `
   /* 明亮模式 - 保持默认样式 */
   .aplayer {
     font-family: var(--font-geist-sans);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
   }
 
   /* 暗色模式适配 */
   .dark .aplayer {
     background: var(--card) !important;
     color: var(--foreground);
+    box-shadow: 0 0 1px 1px oklch(0.3 0.03 240), 0 4px 12px 0 oklch(0.08 0.01 240);
   }
 
   .dark .aplayer .aplayer-info {
     background: var(--card) !important;
-    border-top: none;
-    border-bottom: none;
+    border: none;
   }
 
   .dark .aplayer .aplayer-info .aplayer-music .aplayer-title {
@@ -37,25 +40,47 @@ const APLAYER_CUSTOM_STYLES = `
     color: var(--muted-foreground);
   }
 
+  .dark .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+    padding: 4px 0;
+  }
+
   .dark .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
-    background: var(--muted);
+    height: 4px;
+    background: oklch(0.2 0.02 240) !important;
+    border-radius: 2px;
+  }
+
+  .dark .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+    height: 4px;
+    background: var(--primary) !important;
+    border-radius: 2px;
+  }
+
+  .dark .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+    background: var(--primary) !important;
+    border: 2px solid var(--card);
+    box-shadow: 0 0 4px oklch(0.08 0.01 240);
+    transition: transform 0.2s ease;
   }
 
   .dark .aplayer .aplayer-list {
     background: var(--card) !important;
     border: none;
+    border-radius: 0 0 0.75rem 0.75rem;
+    overflow: hidden;
   }
 
   .dark .aplayer .aplayer-list ol li {
-    border-top: 1px solid var(--border);
+    border-top: 1px solid oklch(0.3 0.03 240);
+    transition: background-color 0.2s ease;
   }
 
   .dark .aplayer .aplayer-list ol li:hover {
-    background: var(--accent);
+    background: oklch(0.2 0.02 240) !important;
   }
 
   .dark .aplayer .aplayer-list ol li.aplayer-list-light {
-    background: var(--accent);
+    background: oklch(0.2 0.02 240) !important;
   }
 
   .dark .aplayer .aplayer-list ol li .aplayer-list-title {
@@ -68,6 +93,34 @@ const APLAYER_CUSTOM_STYLES = `
 
   .dark .aplayer .aplayer-list ol li .aplayer-list-index {
     color: var(--muted-foreground);
+  }
+
+  /* 优化暗色模式下的图标 */
+  .dark .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+    fill: var(--foreground) !important;
+  }
+
+  .dark .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar {
+    background: oklch(0.2 0.02 240) !important;
+  }
+
+  .dark .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar .aplayer-volume {
+    background: var(--primary) !important;
+  }
+
+  /* 优化暗色模式下的滚动条 */
+  .dark .aplayer .aplayer-list::-webkit-scrollbar-thumb {
+    background: oklch(0.3 0.03 240);
+    border-radius: 4px;
+  }
+
+  .dark .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.35 0.03 240);
+  }
+
+  .dark .aplayer .aplayer-list::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
   }
 `;
 
@@ -163,9 +216,7 @@ const Music = () => {
 
         {/* 内容部分 */}
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <div className="bg-card/50 rounded-xl p-6 shadow-sm">
-            <div id="aplayer" ref={playerRef} className="aplayer-wrap" />
-          </div>
+          <div id="aplayer" ref={playerRef} className="aplayer-wrap" />
         </BlurFade>
       </div>
     </div>

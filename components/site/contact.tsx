@@ -34,7 +34,7 @@ const Contact = () => {
 
         {/* 内容部分 */}
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <div className="bg-card/50 rounded-xl p-6 shadow-sm">
+          <div className="bg-card/50 rounded-xl border p-6 shadow-sm">
             <p className="text-muted-foreground mb-6 text-base">欢迎通过以下方式与我联系，我将尽快回复。</p>
 
             {/* 社交媒体链接 */}

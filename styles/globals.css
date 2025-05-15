@@ -110,11 +110,11 @@
   --destructive: oklch(0.65 0.18 30);
 
   /* 暗色图表配色 */
-  --chart-1: oklch(0.7 0.15 280); /* 主品牌紫色 */
-  --chart-2: oklch(0.55 0.15 200); /* 清新蓝 */
-  --chart-3: oklch(0.65 0.12 320); /* 粉红色调 */
-  --chart-4: oklch(0.5 0.15 160); /* 绿色 */
-  --chart-5: oklch(0.55 0.18 60); /* 橙色 */
+  --chart-1: oklch(0.7 0.15 280);
+  --chart-2: oklch(0.55 0.15 200);
+  --chart-3: oklch(0.65 0.12 320);
+  --chart-4: oklch(0.5 0.15 160);
+  --chart-5: oklch(0.55 0.18 60);
 
   /* 侧边栏样式 */
   --sidebar: oklch(0.15 0.01 240);
@@ -218,6 +218,59 @@
   button:active,
   [role="button"]:active {
     transform: translateY(0);
+  }
+
+  /* 优化暗模式下的可读性和美学 */
+  .dark .prose {
+    @apply prose-invert prose-headings:text-foreground prose-p:text-foreground/90;
+  }
+
+  /* 优化暗模式下的卡片和容器 */
+  .dark .card,
+  .dark [data-slot="card"],
+  .dark .bg-card {
+    @apply shadow-[0_0_1px_1px_oklch(0.3_0.03_240),0_4px_12px_0_oklch(0.08_0.01_240)];
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .dark .card:hover,
+  .dark [data-slot="card"]:hover,
+  .dark .bg-card:hover {
+    @apply shadow-[0_0_1px_1px_oklch(0.35_0.03_240),0_8px_20px_0_oklch(0.1_0.01_240)];
+  }
+
+  /* 优化暗模式下的按钮和交互元素 */
+  .dark button,
+  .dark [role="button"] {
+    @apply shadow-[0_0_0_1px_oklch(0.3_0.03_240)] hover:shadow-[0_0_0_1px_oklch(0.35_0.03_240),0_4px_8px_0_oklch(0.1_0.01_240)];
+  }
+
+  /* 优化暗模式下的分隔线和边框 */
+  .dark hr,
+  .dark .border,
+  .dark [data-slot="separator-root"] {
+    @apply border-[oklch(0.3_0.03_240)];
+  }
+
+  /* 优化暗模式下的滚动条 */
+  .dark ::-webkit-scrollbar-thumb {
+    background: oklch(0.3 0.03 240);
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.35 0.03 240);
+  }
+
+  /* 优化暗模式下的选中效果 */
+  .dark ::selection {
+    background-color: oklch(0.7 0.15 280 / 0.3);
+    color: oklch(0.95 0.01 240);
+  }
+
+  /* 优化暗模式下的聚焦效果 */
+  .dark :focus-visible {
+    outline-color: oklch(0.7 0.15 280 / 0.5);
   }
 }
 
@@ -372,11 +425,6 @@
 
   .img-container:hover img {
     transform: scale(1.03);
-  }
-
-  /* 优化暗模式下的可读性和美学 */
-  .dark .prose {
-    @apply prose-invert prose-headings:text-foreground prose-p:text-foreground/90;
   }
 
   /* 优化图像滤镜 */

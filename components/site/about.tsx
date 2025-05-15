@@ -28,7 +28,7 @@ const About = () => {
         {/* 内容部分 */}
         <BlurFade
           delay={BLUR_FADE_DELAY * 3}
-          className="prose dark:prose-invert bg-card/50 max-w-full rounded-xl p-6 text-base leading-relaxed text-pretty shadow-sm"
+          className="prose dark:prose-invert bg-card/50 max-w-full rounded-xl border p-6 text-base leading-relaxed text-pretty shadow-sm"
         >
           <Markdown>{DATA.summary}</Markdown>
         </BlurFade>
