@@ -97,7 +97,7 @@ export const DATA = {
       active: true,
       description:
         "简单好用的导航网站，打造个性化导航，Next.js 与 TailwindCSS 的完美结合，通过JSON自定义导航数据，支持日夜颜色模式切换",
-      technologies: ["Next.js", "Typescript", "TailwindCSS", "Stripe", "Shadcn UI"],
+      technologies: ["React", "Next.js", "Typescript", "TailwindCSS", "Shadcn UI"],
       links: [
         {
           type: "Website",
@@ -105,7 +105,23 @@ export const DATA = {
           icon: <Globe className="size-3" />
         }
       ],
-      image: "/next-web-nav.png"
+      image: "/projects/next-web-nav.png"
+    },
+    {
+      title: "vven-tools",
+      href: "https://tools.liwenkai.fun",
+      dates: "2025",
+      active: true,
+      description: "一个工具网站，提供各种实用的在线工具，助您提高工作效率。无需安装，随时随地使用。",
+      technologies: ["React", "Next.js", "Typescript", "TailwindCSS", "Shadcn UI"],
+      links: [
+        {
+          type: "Website",
+          href: "https://nav.liwenkai.fun",
+          icon: <Globe className="size-3" />
+        }
+      ],
+      image: "/projects/vven-tools.jpeg"
     }
   ]
 } as const;
