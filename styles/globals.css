@@ -49,7 +49,7 @@
 }
 
 :root {
-  /* 参考Apple设计和4oimage的现代清新风格 */
+  /* 现代清新风格 */
   --radius: 1rem;
   --background: oklch(0.995 0.003 240);
   --foreground: oklch(0.2 0.01 240);
@@ -131,7 +131,7 @@
   html {
     scrollbar-gutter: stable;
     font-size: 16px;
-    /* Apple风格的优化排版 */
+    /* 优化排版 */
     line-height: 1.5;
     font-feature-settings: "kern", "liga", "calt";
     text-rendering: optimizeLegibility;
@@ -223,7 +223,7 @@
 
 /* 优化排版和布局 */
 @layer components {
-  /* 类似于4oimage和Apple的容器样式 */
+  /* 容器样式 */
   .container {
     @apply px-4 sm:px-6 lg:px-8;
     max-width: min(100%, theme("screens.xl"));
@@ -242,7 +242,7 @@
     @apply mb-6 font-bold;
   }
 
-  /* 优化标题排版，基于Apple设计风格 */
+  /* 优化标题排版 */
   h1,
   h2,
   h3,
@@ -272,7 +272,7 @@
     max-width: 75ch;
   }
 
-  /* 现代卡片样式，参考4oimage */
+  /* 现代卡片样式 */
   .card {
     @apply bg-card rounded-xl border p-5 shadow-sm;
     transition:
@@ -285,7 +285,7 @@
     transform: translateY(-2px);
   }
 
-  /* Apple启发的按钮样式 */
+  /* 按钮样式 */
   .btn {
     @apply inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-all;
   }
@@ -309,7 +309,7 @@
     transition: filter 0.3s ease;
   }
 
-  /* 类似4oimage的内容网格 */
+  /* 内容网格 */
   .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
@@ -384,7 +384,7 @@
     filter: brightness(0.9);
   }
 
-  /* 背景网格样式 - 更微妙的4oimage风格 */
+  /* 背景网格样式 */
   .bg-grid-pattern {
     background-size: 120px 120px;
     background-image: radial-gradient(circle, var(--primary) / 5% 1px, transparent 1px);
@@ -412,7 +412,7 @@
     transform: translateY(0);
   }
 
-  /* 磨砂玻璃效果 - Apple设计风格 */
+  /* 磨砂玻璃效果 */
   .glass-effect {
     background: var(--background) / 90;
     backdrop-filter: blur(12px);
@@ -420,7 +420,7 @@
     border: 1px solid var(--border);
   }
 
-  /* 项目卡片 - 4oimage风格 */
+  /* 项目卡片 */
   .project-card {
     @apply bg-card border-border relative flex flex-col overflow-hidden rounded-xl border;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);

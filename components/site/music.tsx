@@ -6,24 +6,96 @@ import { Music as MusicIcon } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
+// 自定义 APlayer 样式，主要处理日夜模式
+const APLAYER_CUSTOM_STYLES = `
+  /* 明亮模式 - 保持默认样式 */
+  .aplayer {
+    font-family: var(--font-geist-sans);
+  }
+
+  /* 暗色模式适配 */
+  .dark .aplayer {
+    background: var(--card) !important;
+    color: var(--foreground);
+  }
+
+  .dark .aplayer .aplayer-info {
+    background: var(--card) !important;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .dark .aplayer .aplayer-info .aplayer-music .aplayer-title {
+    color: var(--foreground);
+  }
+
+  .dark .aplayer .aplayer-info .aplayer-music .aplayer-author {
+    color: var(--muted-foreground);
+  }
+
+  .dark .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+    color: var(--muted-foreground);
+  }
+
+  .dark .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
+    background: var(--muted);
+  }
+
+  .dark .aplayer .aplayer-list {
+    background: var(--card) !important;
+    border: none;
+  }
+
+  .dark .aplayer .aplayer-list ol li {
+    border-top: 1px solid var(--border);
+  }
+
+  .dark .aplayer .aplayer-list ol li:hover {
+    background: var(--accent);
+  }
+
+  .dark .aplayer .aplayer-list ol li.aplayer-list-light {
+    background: var(--accent);
+  }
+
+  .dark .aplayer .aplayer-list ol li .aplayer-list-title {
+    color: var(--foreground);
+  }
+
+  .dark .aplayer .aplayer-list ol li .aplayer-list-author {
+    color: var(--muted-foreground);
+  }
+
+  .dark .aplayer .aplayer-list ol li .aplayer-list-index {
+    color: var(--muted-foreground);
+  }
+`;
+
 const Music = () => {
   const playerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // 动态加载 APlayer CSS
     const loadCss = () => {
+      // 加载原始 APlayer CSS
       const link = document.createElement("link");
       link.rel = "stylesheet";
       link.href = "https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css";
       document.head.appendChild(link);
-      return link;
+
+      // 添加自定义样式
+      const style = document.createElement("style");
+      style.textContent = APLAYER_CUSTOM_STYLES;
+      document.head.appendChild(style);
+
+      return [link, style];
     };
 
     // 动态导入 APlayer
     const loadAPlayer = async () => {
       try {
         // 加载 CSS
-        const cssLink = loadCss();
+        const [cssLink, customStyle] = loadCss();
 
         // 导入 APlayer
         const APlayerModule = await import("aplayer");
@@ -51,6 +123,7 @@ const Music = () => {
           // 返回清理函数
           return () => {
             document.head.removeChild(cssLink);
+            document.head.removeChild(customStyle);
             ap.destroy();
           };
         }

@@ -1,16 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { AtSign, MailIcon } from "lucide-react";
+import { AtSign, MailIcon, Moon, Sun } from "lucide-react";
 import { BlurFade } from "../magicui/blur-fade";
 import { DATA } from "@/data/resume";
-import { ModeToggle } from "../mode-toggle";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
 import { Separator } from "../ui/separator";
+import { useTheme } from "next-themes";
 
 const BLUR_FADE_DELAY = 0.04;
 
 const Contact = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
     <div className="relative">
       {/* 背景装饰 */}
@@ -74,8 +76,12 @@ const Contact = () => {
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <div className="bg-secondary/10 text-secondary hover:bg-secondary hover:text-secondary-foreground flex h-10 w-10 items-center justify-center rounded-full transition-all">
-                        <ModeToggle />
+                      <div
+                        className="bg-secondary/10 text-secondary hover:bg-secondary hover:text-secondary-foreground flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition-all"
+                        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                      >
+                        <Sun className="size-4 dark:hidden" />
+                        <Moon className="hidden size-4 dark:block" />
                       </div>
                     </TooltipTrigger>
                     <TooltipContent side="top" className="text-xs font-medium">
