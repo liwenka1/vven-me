@@ -63,7 +63,7 @@ export const DATA = {
 
         navbar: true
       },
-      X: {
+      Twitter: {
         name: "Twitter",
         url: "https://x.com/liwenka1",
         icon: Twitter,
