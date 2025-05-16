@@ -70,7 +70,7 @@ const Hero = () => {
         <BlurFade delay={BLUR_FADE_DELAY * 5} className="absolute bottom-8 animate-bounce">
           <a
             href="#about"
-            className="group bg-background/80 hover:bg-background inline-flex size-12 items-center justify-center rounded-full shadow-lg backdrop-blur-sm transition-all hover:shadow-xl"
+            className="group bg-background/80 hover:bg-background inline-flex size-12 items-center justify-center rounded-full border shadow-lg backdrop-blur-sm transition-all hover:shadow-xl"
             aria-label="向下滚动"
           >
             <ChevronDown className="text-muted-foreground size-6 transition-transform group-hover:translate-y-0.5" />
