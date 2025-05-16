@@ -18,13 +18,7 @@ export const metadata: Metadata = {
   description: "🦖「像素暴龙开发者领域」- 代码与热血的次元交汇点",
   keywords: ["文凯", "开发者", "作品集", "前端", "设计", "编程"],
   authors: [{ name: "VVenKAI" }],
-  viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#1a1a1a" }
-  ],
-  robots: "index, follow",
-  manifest: "/manifest.json"
+  robots: "index, follow"
 };
 
 export default function RootLayout({
