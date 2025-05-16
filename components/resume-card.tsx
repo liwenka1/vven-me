@@ -39,7 +39,7 @@ export const ResumeCard = ({
   };
 
   return (
-    <Link href={href || "#"} className="block cursor-pointer" onClick={handleClick}>
+    <Link href={href || "#"} className="block cursor-pointer" onClick={handleClick} target="_blank">
       <Card className="flex w-full flex-row items-center bg-transparent px-6">
         <div className="flex-none">
           <Avatar className="bg-muted-foreground dark:bg-foreground m-auto size-12 border">
@@ -77,7 +77,6 @@ export const ResumeCard = ({
               initial={{ opacity: 0, height: 0 }}
               animate={{
                 opacity: isExpanded ? 1 : 0,
-
                 height: isExpanded ? "auto" : 0
               }}
               transition={{
