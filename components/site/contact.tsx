@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { AtSign, MailIcon, Moon, Sun } from "lucide-react";
+import { AtSign, Moon, Sun } from "lucide-react";
 import { BlurFade } from "../magicui/blur-fade";
 import { DATA } from "@/data/resume";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
@@ -60,13 +60,13 @@ const Contact = () => {
                     </Tooltip>
                   ))}
 
-                  <Link
+                  {/* <Link
                     href={`mailto:${DATA.contact.email}`}
                     className="bg-secondary/10 text-secondary hover:bg-secondary hover:text-secondary-foreground inline-flex h-10 items-center justify-center gap-2 rounded-full px-4 text-sm font-medium transition-all hover:shadow-md"
                   >
                     <MailIcon className="size-4" />
                     {DATA.contact.email}
-                  </Link>
+                  </Link> */}
                 </TooltipProvider>
               </div>
 
