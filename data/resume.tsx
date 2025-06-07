@@ -121,7 +121,23 @@ export const DATA = {
           icon: <Globe className="size-3" />
         }
       ],
-      image: "/projects/vven-tools.jpeg"
+      image: "/projects/vven-tools.png"
+    },
+    {
+      title: "video-to-ppt",
+      href: "https://video.liwenkai.fun",
+      dates: "2025",
+      active: true,
+      description: "基于 WebAV 和 FFmpeg 的现代化视频分析与 PPT 生成工具，支持屏幕录制、本地视频处理和在线视频分析",
+      technologies: ["React", "Next.js", "Typescript", "TailwindCSS", "Shadcn UI", "WebAV", "FFmpeg"],
+      links: [
+        {
+          type: "Website",
+          href: "https://video.liwenkai.fun",
+          icon: <Globe className="size-3" />
+        }
+      ],
+      image: "/projects/video-to-ppt.png"
     }
   ]
 } as const;
