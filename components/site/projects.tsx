@@ -43,13 +43,7 @@ const Projects = () => {
               <div className="project-card">
                 <div className="project-card__image">
                   {project.image && (
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={1920}
-                      height={1080}
-                      className="object-contain"
-                    />
+                    <Image src={project.image} alt={project.title} width={1920} height={1080} className="" />
                   )}
                 </div>
                 <div className="project-card__content">
