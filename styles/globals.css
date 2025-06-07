@@ -480,11 +480,15 @@
   }
 
   .project-card__image {
-    @apply aspect-[16/9] w-full overflow-hidden;
+    @apply w-full overflow-hidden;
+    height: 240px; /* 设置固定高度 */
   }
 
   .project-card__image img {
-    @apply h-full w-full object-cover;
+    @apply w-full object-cover;
+    height: auto;
+    min-height: 240px; /* 确保至少填满容器高度 */
+    object-position: top; /* 显示图片顶部 */
     transition: transform 0.5s ease;
   }
 
